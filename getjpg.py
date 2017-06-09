@@ -8,7 +8,7 @@ def gethtml(url):
 def getimg(html):
     img_re = re.compile(r'src="(http:.+\.jpg)')
     imgList = re.findall(img_re,html)
-    imgNo = 
+    imgNo = 1
     for imgAddr in imgList:
          urllib.urlretrieve(imgAddr,"img%s.jpg" % imgNo)
          imgNo += 1
